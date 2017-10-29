@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0333)http://preview.ehost.com/extern/embed-html/embed-html.html?wzId=id1502239959758&wzInstanceId=id1502239959758&wzAppId=embed_html_app&wzAppV=1&wzApiType=app&wzDeviceType=desktop&wzMode=view&wzSessionId=1509122090512&wzEncodeParams=eyJ3ekN1cnJlbnRVcmwiOiJodHRwOi8vZmFuYm9hcmQuY28vIiwid3pTaXplIjp7IndpZHRoIjo5OTIsImhlaWdodCI6NjR9fQ%3D%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    
+    <script src="./apps-api.js"></script>
+    <script type="text/javascript">
+        var _wzSessionId = AppsApi.getQueryParamValue("wzId") + AppsApi.getQueryParamValue("wzSessionId");
+        var isLoaded = sessionStorage.getItem(_wzSessionId + "html") != null;
+        if (isLoaded) {
+            AppsApi.addEventListener(AppsApi.Events.SETTING_CHANGE, function(data) {
+                var reload = false;
+                for (var i in data) {
+                    var prop = data[i];
+                    if (prop.name === "html") {
+                        sessionStorage.setItem(_wzSessionId + "html", prop.value);
+                        reload = true;
+                    } else if (prop.name === "headerHtml") {
+                        sessionStorage.setItem(_wzSessionId + "headerHtml", prop.value);
+                        reload = true;
+                    }
+                }
+                if (reload) {
+                    window.location.reload();
+                }
+            });
+            AppsApi.addEventListener(AppsApi.Events.SIZE_CHANGE, function(data) { document.body.style.width = data.width + "px"; document.body.style.height = data.height + "px"; });
+            var headerHtml = sessionStorage.getItem(_wzSessionId + "headerHtml");
+            if (headerHtml) {
+                document.write(headerHtml);
+            }
+        } else {
+            AppsApi.getSettings(["html", "headerHtml"], function(data) {
+                sessionStorage.setItem(_wzSessionId + "html", data.html);
+                sessionStorage.setItem(_wzSessionId + "headerHtml", data.headerHtml);
+                window.location.reload();
+            });
+        }
+    </script>
+</head>
+<body marginwidth="0" marginheight="0" style="width: 992px; height: 64px;">
+<script type="text/javascript">
+    var html = sessionStorage.getItem(_wzSessionId + "html");
+    if (html != null) {
+        var size = AppsApi.getQueryParamValue("wzSize");
+        document.body.style.width = size.width + "px"; document.body.style.height = size.height + "px";
+        document.write(html);
+    }
+</script><!-- Begin MailChimp Signup Form -->
+<link href="./horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="http://fanboard.us16.list-manage.com/subscribe/post?u=4e3a21cbe7cf3e1b02eef0cf2&amp;id=96b1d32461" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe to our beta a program</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4e3a21cbe7cf3e1b02eef0cf2_96b1d32461" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+</body></html>
