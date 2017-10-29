@@ -59,7 +59,7 @@ table {
 }
 
 .hdr {
-  height: 20vh;
+  /*height: 20vh;*/
   background-color: black;
   margin-bottom: 10px;
 }
