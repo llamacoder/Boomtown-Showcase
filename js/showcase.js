@@ -6,6 +6,7 @@ gFavs = {};
 initFavs();
 initCompanies();
 addFavListeners();
+addCompanyListeners();
 
 function initCompanies() {
   //  initialize data for all the companies
@@ -19,7 +20,7 @@ function initCompanies() {
 
 function addCompanyToUI(company) {
   //  build up the html string to add a company
-  let htmlStr = '<div class="col s12 m6 l4">' +
+  let htmlStr = '<div class="company col s12 m6 l4">' +
       '<img class="z-depth-2" src="' + company["logo"] +
       '">' + '<a class="fav-button btn-floating waves-effect waves-light ';
   gFavs[company["logo"]] === undefined ||
@@ -40,6 +41,29 @@ function addFavListeners() {
   $(".fav-button").click(function(event) {
     toggleFavState(event.target);
   });
+}
+
+function addCompanyListeners() {
+  $(".company").click(function(event) {
+    //  target is the img, so grab the src and look up the assoc'd company
+    let co = getCompanyFromSrc($(event.target).attr("src"));
+    if (co !== null) {
+      showCompanyDetails(co);
+    }
+  });
+}
+
+function getCompanyFromSrc(str) {
+  for (var i = 0; i < gCompanies.length; i++) {
+    if (gCompanies[i].logo === str) {
+      return gCompanies[i];
+    }
+  }
+  return null;
+}
+
+function showCompanyDetails(company) {
+  alert("Showing company details for " + company["name"]);
 }
 
 //  Update fav status after user click
