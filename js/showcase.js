@@ -63,7 +63,31 @@ function getCompanyFromSrc(str) {
 }
 
 function showCompanyDetails(company) {
-  alert("Showing company details for " + company["name"]);
+  //  set up the new company data on the detail panel and show it
+  let $detail = $("#detail-panel");
+  $detail.empty();
+  let htmlStr = '<div class="z-depth-2 ' + company.bgColor + ' white-text detail-title">' +
+                company.name + '</div>';
+  htmlStr += '<div class="company col s12 m6 l4">' +
+      '<img class="z-depth-2" src="' + company["logo"] +
+      '">' +
+      '</div>' +
+      '<div class="z-depth-2"><p>' + company.description + "</div>";
+  htmlStr += '<div class="z-depth-2 ' + company.bgColor + ' white-text detail-title">Founders</div>';
+  htmlStr += '<div class="card">' +
+             '<div class="card-content"><p>I am a very simple card.</p></div>' +
+             '<div class="card-content grey lighten-4">' +
+             '<div id="test4">Test 1</div>' +
+             '<div id="test5">Test 2</div>' +
+             '<div id="test6">Test 3</div>' +
+             '</div></div>';
+  htmlStr += '<div id="web-bar" class="z-depth-2 ' + company.bgColor + ' white-text detail-title">' +
+              company.website + '</div>';
+
+
+  $detail.append(htmlStr);
+
+  $.fancybox.open($('#detail-panel'));
 }
 
 //  Update fav status after user click
@@ -89,7 +113,7 @@ function initCompanyData() {
     logo: "./images/ccLogo.png",
     tagLine: "Changing the Face of Money",
     description: "ChargaCard is a store-issued credit card that allows customers to pay in installments. Our objective is to empower online shoppers, especially the 70% of millennials without credit scores and limited access to credit, with an alternative financing solution. Unlike the competition which offers third-party financing, ChargaCard empowers online stores to build a recurring financial relationship with their customers, get repeat business, increase brand loyalty, and grow their business through the ChargaNetwork.",
-    website: "https://www.chargacard.com/",
+    website: "www.chargacard.com",
     founders: [
       { name: "John Eagleton",
         title: "CTO",
@@ -103,7 +127,7 @@ function initCompanyData() {
       }
     ],
     orientation: "hl",
-    bgColor: "darkBlue",
+    bgColor: "teal lighten-2",
     lgColor: "white",
     smColor: "lightGrey"
   });
@@ -128,7 +152,7 @@ function initCompanyData() {
       }
     ],
     orientation: "hr",
-    bgColor: "lightGrey",
+    bgColor: "light-blue lighten-4",
     lgColor: "darkBlue",
     smColor: "lightBlue"
   });
@@ -153,7 +177,7 @@ function initCompanyData() {
       }
     ],
     orientation: "hl",
-    bgColor: "black",
+    bgColor: "orange darken-4",
     lgColor: "orange",
     smColor: "white"
   });
@@ -178,7 +202,7 @@ function initCompanyData() {
       }
     ],
     orientation: "hr",
-    bgColor: "lightGrey",
+    bgColor: "orange darken-4",
     lgColor: "black",
     smColor: "orange"
   });
@@ -203,7 +227,7 @@ function initCompanyData() {
       }
     ],
     orientation: "hl",
-    bgColor: "lightGreen",
+    bgColor: "light-blue darken-2",
     lgColor: "black",
     smColor: "white"
   });
@@ -228,7 +252,7 @@ function initCompanyData() {
       }
     ],
     orientation: "hr",
-    bgColor: "black",
+    bgColor: "red",
     lgColor: "white",
     smColor: "lightGrey"
   });
@@ -253,7 +277,7 @@ function initCompanyData() {
       }
     ],
     orientation: "hl",
-    bgColor: "black",
+    bgColor: "orange darken-4",
     lgColor: "white",
     smColor: "orange"
   });
@@ -278,7 +302,7 @@ function initCompanyData() {
       }
     ],
     orientation: "hr",
-    bgColor: "white",
+    bgColor: "cyan darken-3",
     lgColor: "black",
     smColor: "orange"
   });
