@@ -1,6 +1,12 @@
+document.addEventListener("DOMContentLoaded", function() {
 
 gCompanies = [];
 gFavs = {};
+
+initFavs();
+initCompanies();
+addFavListeners();
+addCompanyListeners();
 
 function initCompanies() {
   //  initialize data for all the companies
@@ -339,18 +345,6 @@ function initCompanyData() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  initFavs();
-  initCompanies();
-  addFavListeners();
-  addCompanyListeners();
+
+
 });
-
-var calculator = {}
-
-calculator.add = function(num1, num2) {
-  return num1 + num2;
-}
-calculator.subtract = function(num1, num2) {
-  return num1 - num2;
-}
