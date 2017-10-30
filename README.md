@@ -4,7 +4,7 @@ Welcome to the Boomtown Cohort Showcase!
 
 To view the running site, please visit smooth-current.surge.sh.  
 
-The purpose of this site is to provide attendees of Boomtown Accelerator's Demo Day with information on all the companies in the current cohort.  The initial screen provides an overview of all the company logos and taglines, and it allows the user an opportunity to mark their favorites.  This main screen is responsive to three different screen sizes:
+The purpose of this site is to provide attendees of Boomtown Accelerator's Demo Day with information on all the companies in the current cohort.  The initial screen provides an overview of all the company logos and taglines, and it allows the user an opportunity to mark their favorites in case they want to be sure to get in touch with them after the demo day.  (The favorites are kept in local storage.)  This main screen is responsive to three different screen sizes:
 
 ![](1.png)
 
