@@ -74,19 +74,17 @@ function showCompanyDetails(company) {
       '</div>' +
       '<div class="z-depth-2"><p>' + company.description + "</div>";
   htmlStr += '<div class="z-depth-2 ' + company.bgColor + ' white-text detail-title">Founders</div>';
-  htmlStr += '<div class="founder">' +
-             '<img class="circle" src="' + company.founders[0].photo + '">' +
-             '<p>' + company.founders[0].name + '<br>' +
-             company.founders[0].title + '<br><br>' +
-             company.founders[0].credentials + '</p>' +
-             '</div>';
-  htmlStr += '<hr>';
-  htmlStr += '<div class="founder">' +
-            '<img class="circle" src="' + company.founders[1].photo + '">' +
-            '<p><b>' + company.founders[1].name + '</b><br>' +
-            company.founders[1].title + '<br><br>' +
-            company.founders[1].credentials + '</p>' +
-            '</div>';
+  for (var i = 0; i < company.founders.length; i++) {
+    htmlStr += '<div class="founder">' +
+               '<img class="circle" src="' + company.founders[i].photo + '">' +
+               '<p>' + company.founders[i].name + '<br>' +
+               company.founders[i].title + '<br><br>' +
+               company.founders[i].credentials + '</p>' +
+               '</div>';
+    if (i < company.founders.length - 1) {
+      htmlStr += '<hr>';
+    }
+  }
   htmlStr += '<div class="' + company.bgColor +
              ' detail-web-bar ">' +
              '<a id="web-button" href="http://' + company.website + '/" target="blank_" class=" white-text waves-effect btn-flat">Visit Our Website</a>' +
@@ -96,7 +94,7 @@ function showCompanyDetails(company) {
 
   $detail.append(htmlStr);
 
-  $.fancybox.open($('#detail-panel'), {showCloseButton:false});
+  $.fancybox.open($('#detail-panel'));
 }
 
 //  Update fav status after user click
