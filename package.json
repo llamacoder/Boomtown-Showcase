@@ -7,7 +7,9 @@
     "test": "test"
   },
   "dependencies": {
-    "chai": "^4.1.2"
+    "casperjs": "^1.1.4",
+    "chai": "^4.1.2",
+    "phantomjs": "^2.1.7"
   },
   "devDependencies": {
     "mocha": "^4.0.1"
