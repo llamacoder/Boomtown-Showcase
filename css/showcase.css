@@ -120,6 +120,16 @@ table {
   font-weight: bold;
   padding-top: 5px;
 }
+
+.detail-web-bar {
+  color: white;
+  text-align: center;
+}
+
+.fancybox-close-small:focus {
+	background: transparent;
+}
+
 @media screen and (max-width: 400px) {
   #detail-panel img {
     float: none;

@@ -87,13 +87,16 @@ function showCompanyDetails(company) {
             company.founders[1].title + '<br><br>' +
             company.founders[1].credentials + '</p>' +
             '</div>';
-  htmlStr += '<div id="web-bar" class="z-depth-2 ' + company.bgColor + ' white-text detail-title">' +
-              company.website + '</div>';
+  htmlStr += '<div class="' + company.bgColor +
+             ' detail-web-bar ">' +
+             '<a id="web-button" href="http://' + company.website + '/" target="blank_" class=" white-text waves-effect btn-flat">Visit Our Website</a>' +
+             '<a id="contact-button" href="mailto:' + company.email +
+             '?Subject=Info%20About%20Your%20Company" class=" white-text waves-effect btn-flat">Contact Us</a>';
 
 
   $detail.append(htmlStr);
 
-  $.fancybox.open($('#detail-panel'));
+  $.fancybox.open($('#detail-panel'), {showCloseButton:false});
 }
 
 //  Update fav status after user click
@@ -132,6 +135,7 @@ function initCompanyData() {
         credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
       }
     ],
+    email: "info@chargacard.com",
     orientation: "hl",
     bgColor: "teal lighten-2",
     lgColor: "white",
@@ -157,6 +161,7 @@ function initCompanyData() {
         credentials: "Frustrated with the slow adoption of new technologies in healthcare, Dr. Duong focuses his energy on the intersection of technology and medicine. After completing medical school, Dr. Duong created a gig-based telemedicine startup called DimeDoc, providing affordable access to healthcare professionals using a similar model to Fiverr.com. He eventually sold the underlying platform code and remains involved in researching the latest technologies in the medical space. Dr. Duong also researches, edits, reviews, and writes medical literature for several companies around the world."
       }
     ],
+    email: "info@diagnosisai.com",
     orientation: "hr",
     bgColor: "light-blue lighten-4",
     lgColor: "darkBlue",
@@ -182,6 +187,7 @@ function initCompanyData() {
         credentials: "Vladimir knows all about technology and is really good at it."
       }
     ],
+    email: "info@fanboard.co",
     orientation: "hl",
     bgColor: "orange darken-4",
     lgColor: "orange",
@@ -217,6 +223,7 @@ function initCompanyData() {
         credentials: "Max knows all about information and has been doing it for a long time and is really good at it."
       }
     ],
+    email: "info@hyggepower.com",
     orientation: "hr",
     bgColor: "orange darken-4",
     lgColor: "black",
@@ -242,6 +249,7 @@ function initCompanyData() {
         credentials: "Alireza is the technical guru for the company.  He has been doing technical things forever and is really good at them."
       }
     ],
+    email: "info@simor.org",
     orientation: "hl",
     bgColor: "light-blue darken-2",
     lgColor: "black",
@@ -267,6 +275,7 @@ function initCompanyData() {
         credentials: "Maria knows all about technology and is really good at it."
       }
     ],
+    email: "info@truesyncmedia.com",
     orientation: "hr",
     bgColor: "red",
     lgColor: "white",
@@ -297,6 +306,7 @@ function initCompanyData() {
         credentials: "Gene knows all about information stuff and has been doing it for a long time and is really good at it."
       }
     ],
+    email: "info@welto.io",
     orientation: "hl",
     bgColor: "orange darken-4",
     lgColor: "white",
@@ -327,6 +337,7 @@ function initCompanyData() {
         credentials: "Chad knows all about technical things and has been doing them for a really long time and is really good at it."
       }
     ],
+    email: "info@yaguara.co",
     orientation: "hr",
     bgColor: "cyan darken-3",
     lgColor: "black",
