@@ -144,17 +144,17 @@ function initCompanyData() {
     logo: "./images/diagnosisAILogo.png",
     tagLine: "Technology Advancing Medical Care",
     description: "DiagnosisAI guides patients through complicated surgeries using artificial intelligence to provide patients directed reminders, answers to questions, diagnoses, and recommended treatments while maximizing clinic reimbursements using data analytics. DiagnosisAI aims to be at the heart of the future connected medical experience.",
-    website: "http://www.diagnosisai.com/",
+    website: "www.diagnosisai.com",
     founders: [
-      { name: "John Eagleton",
-        title: "CTO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-4.jpg",
-        credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
-      },
-      { name: "Maria Nosikova",
+      { name: "Dr. Omeed Saghafi",
         title: "CEO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-1.jpg",
-        credentials: "Maria knows all about finance and is really good at it."
+        photo: "../images/DOmeedSaghafi.jpg",
+        credentials: "As a practicing Emergency Physician, Dr. Saghafi has experienced the increasing need for easy and affordable access to healthcare firsthand. He works at several private hospitals in Denver, Colorado and is a Clinical Instructor at the University of Colorado. He received a BS in Bioengineering and MD from the University of California, San Diego. He completed a residency in Emergency Medicine at Denver Health Medical Center, and is a MBA candidate at the University of Colorado."
+      },
+      { name: "Dr. Henry Duong",
+        title: "CTO",
+        photo: "../images/DHenryDuong.jpg",
+        credentials: "Frustrated with the slow adoption of new technologies in healthcare, Dr. Duong focuses his energy on the intersection of technology and medicine. After completing medical school, Dr. Duong created a gig-based telemedicine startup called DimeDoc, providing affordable access to healthcare professionals using a similar model to Fiverr.com. He eventually sold the underlying platform code and remains involved in researching the latest technologies in the medical space. Dr. Duong also researches, edits, reviews, and writes medical literature for several companies around the world."
       }
     ],
     orientation: "hr",
@@ -169,17 +169,17 @@ function initCompanyData() {
     logo: "./images/fanboardLogo.png",
     tagLine: "Augmenting the Fan Experience",
     description: "The number one goal of Fanboard is to create a better fan experience, to turn a mobile device into an enhancing lense that can transform the everyday into interactive moments. Fanboard's immersive products attract fans to their favorite team's native app. This is extremely powerful for the franchise. Engagement here creates connection with the team's brand and provides the opportunity to connect fans to team sponsors.",
-    website: "http://fanboard.co/",
+    website: "fanboard.co",
     founders: [
-      { name: "John Eagleton",
-        title: "CTO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-4.jpg",
-        credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
-      },
-      { name: "Maria Nosikova",
+      { name: "Morgan Drake",
         title: "CEO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-1.jpg",
-        credentials: "Maria knows all about finance and is really good at it."
+        photo: "../images/FMorganDrake.png",
+        credentials: "Morgan knows all about media, content, sports, and financial stuff and is really good at it."
+      },
+      { name: "Vladimir Cezar",
+        title: "Technical Co-Founder",
+        photo: "../images/FVladimirCezar.jpg",
+        credentials: "Vladimir knows all about technology and is really good at it."
       }
     ],
     orientation: "hl",
@@ -194,17 +194,27 @@ function initCompanyData() {
     logo: "./images/hyggeLogo.png",
     tagLine: "OPO:  The Outlet, Perfected",
     description: "Hygge (pronounced HUE-guh) is the Danish culture of coziness and beauty in everyday moments, and the inspiration behind Hygge Power. By transforming the everyday outlet, we’re transforming how people feel about and use power. And OPO is just the beginning.",
-    website: "https://www.hyggepower.com/",
+    website: "www.hyggepower.com",
     founders: [
-      { name: "John Eagleton",
+      { name: "Caleb Scalf",
         title: "CTO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-4.jpg",
-        credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
+        photo: "../images/HCalebScalf.jpg",
+        credentials: "Caleb is the vision guru for the company.  He has been doing visionary things forever and is really good at them."
       },
-      { name: "Maria Nosikova",
-        title: "CEO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-1.jpg",
-        credentials: "Maria knows all about finance and is really good at it."
+      { name: "David Delcourt",
+        title: "CTO",
+        photo: "../images/HDavidDelcourt.jpg",
+        credentials: "David knows all about technology and has been doing it for a long time and is really good at it."
+      },
+      { name: "Mark Mietus",
+        title: "CFO",
+        photo: "../images/HMarkMietus.jpg",
+        credentials: "Mark knows all about finance and has been doing it for a long time and is really good at it."
+      },
+      { name: "Max Lewin",
+        title: "CIO",
+        photo: "../images/HMaxLewin.jpg",
+        credentials: "Max knows all about information and has been doing it for a long time and is really good at it."
       }
     ],
     orientation: "hr",
@@ -219,17 +229,17 @@ function initCompanyData() {
     logo: "./images/simorLogo.png",
     tagLine: "Honoring the Intuitive Mind",
     description: "Albert Einstein once said the intuitive mind is a sacred gift and the rational mind is a faithful servant. We have created a society that honors the servant and has forgotten the gift. Simor aims to honor the sacred gift by connecting you intellectually.",
-    website: "https://www.simor.org/",
+    website: "www.simor.org",
     founders: [
-      { name: "John Eagleton",
-        title: "CTO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-4.jpg",
-        credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
-      },
-      { name: "Maria Nosikova",
+      { name: "Alireza Mohammadrezabeig",
         title: "CEO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-1.jpg",
-        credentials: "Maria knows all about finance and is really good at it."
+        photo: "../images/SAlirezaMohammadrezabeig.jpg",
+        credentials: "Alireza knows all about CEO stuff and is really good at it."
+      },
+      { name: "Alireza Asadi",
+        title: "CTO",
+        photo: "../images/SAlirezaAsadi.jpg",
+        credentials: "Alireza is the technical guru for the company.  He has been doing technical things forever and is really good at them."
       }
     ],
     orientation: "hl",
@@ -244,17 +254,17 @@ function initCompanyData() {
     logo: "./images/trueSyncLogo.png",
     tagLine: "Video Networks By Design",
     description: "Promote your latest specials and new food items. Blend your messaging with our award winning content and get noticed! Create the message once and distribute the message across all locations instantly. Replace TV on mute with engaging content that gets noticed. No longer will you promote competitors on TVs at your location.",
-    website: "https://truesyncmedia.com/",
+    website: "truesyncmedia.com",
     founders: [
-      { name: "John Eagleton",
-        title: "CTO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-4.jpg",
+      { name: "Scott Davis",
+        title: "CEO",
+        photo: "../images/TScottDavis.jpg",
         credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
       },
-      { name: "Maria Nosikova",
-        title: "CEO",
+      { name: "Mark Larson",
+        title: "CTO",
         photo: "http://lorempixel.com/output/people-q-c-50-50-1.jpg",
-        credentials: "Maria knows all about finance and is really good at it."
+        credentials: "Maria knows all about technology and is really good at it."
       }
     ],
     orientation: "hr",
@@ -269,17 +279,22 @@ function initCompanyData() {
     logo: "./images/weltoLogo.png",
     tagLine: "Pay Bills with Cryptocurrency",
     description: "Helto is a blockchain-enabled bill and personal finance management platform that allows bitcoin owners to directly pay bills without dealing with exchanges and mismatched currencies.",
-    website: "http://welto.io/",
+    website: "welto.io",
     founders: [
-      { name: "John Eagleton",
-        title: "CTO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-4.jpg",
-        credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
-      },
-      { name: "Maria Nosikova",
+      { name: "Alex Pashkevych",
         title: "CEO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-1.jpg",
-        credentials: "Maria knows all about finance and is really good at it."
+        photo: "../images/WAlexPashkevych.png",
+        credentials: "Alex is the vision guru for the company.  He has been doing visionary things forever and is really good at them."
+      },
+      { name: "Dmitriy Sazonov",
+        title: "CTO",
+        photo: "../images/WDima.jpg",
+        credentials: "Dmitriy knows all about technical stuff and has been doing it for a long time and is really good at it."
+      },
+      { name: "Gene Chytakh",
+        title: "CIO",
+        photo: "../images/WGene.jpg",
+        credentials: "Gene knows all about information stuff and has been doing it for a long time and is really good at it."
       }
     ],
     orientation: "hl",
@@ -294,17 +309,22 @@ function initCompanyData() {
     logo: "./images/yaguaraLogo.png",
     tagLine: "Your Growth Management Platform",
     description: "Yaguara aligns your team behind goals and gives individuals access to the data they need so they can be productive, proactive, and successful.",
-    website: "https://yaguara.co/",
+    website: "yaguara.co",
     founders: [
-      { name: "John Eagleton",
-        title: "CTO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-4.jpg",
-        credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
-      },
-      { name: "Maria Nosikova",
+      { name: "Jonathan Smalley",
         title: "CEO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-1.jpg",
-        credentials: "Maria knows all about finance and is really good at it."
+        photo: "../images/YJonathanSmalley.jpg",
+        credentials: "Jonathan is the vision guru for the company.  He has been doing visionary things forever and is really good at them."
+      },
+      { name: "Patrick Williamson",
+        title: "CIO",
+        photo: "../images/YPatrickWilliamson.jpg",
+        credentials: "Patrick is the information guru for the company.  He has been doing information things forever and is really good at them."
+      },
+      { name: "Chad Nickell",
+        title: "CTO",
+        photo: "../images/YChadNickell.jpg",
+        credentials: "Chad knows all about technical things and has been doing them for a really long time and is really good at it."
       }
     ],
     orientation: "hr",
