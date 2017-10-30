@@ -1,11 +1,23 @@
 # Boomtown-Showcase
 
-Deployed at smooth-current.surge.sh
+Welcome to the Boomtown Cohort Showcase!
 
-Includes unit testing to fetch one of the sample companies (tests.js); Includes
-browser testing to verify the title of the tab and to check for the presence of
-one of the browser elements.  
+To view the running site, please visit smooth-current.surge.sh.  
 
-I encountered difficulties with testing because I populate most of the pageSettings
-via javascript, and it appears as though those items don't get loaded by the
-time casperjs runs.  I'll investigate more.
+The purpose of this site is to provide attendees of Boomtown Accelerator's Demo Day with information on all the companies in the current cohort.  The initial screen provides an overview of all the company logos and taglines, and it allows the user an opportunity to mark their favorites.  This main screen is responsive to three different screen sizes:
+
+![](1.png)
+
+![](2.png)
+
+![](3.png)
+
+The user can click on any of the company cards to get more information about that company.  This info includes a description of the company's mission, a list and description of its founders, a link to its website, and an email link for more information.  This info card is also responsive:
+
+![](4.png)
+
+![](5.png)
+
+![](6.png)
+
+To install this code, fork and clone and npm install.  You can run unit tests by running live-server in the test directory; the tests are in the tests.js file.  You can run browser tests by running casperjs casper_tests.js (just verifies the page title) and casperjs test casper_tests_really.js (checks for the presence of the "company-row" browser element).
