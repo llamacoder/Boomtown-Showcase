@@ -74,13 +74,19 @@ function showCompanyDetails(company) {
       '</div>' +
       '<div class="z-depth-2"><p>' + company.description + "</div>";
   htmlStr += '<div class="z-depth-2 ' + company.bgColor + ' white-text detail-title">Founders</div>';
-  htmlStr += '<div class="card">' +
-             '<div class="card-content"><p>I am a very simple card.</p></div>' +
-             '<div class="card-content grey lighten-4">' +
-             '<div id="test4">Test 1</div>' +
-             '<div id="test5">Test 2</div>' +
-             '<div id="test6">Test 3</div>' +
-             '</div></div>';
+  htmlStr += '<div class="founder">' +
+             '<img class="circle" src="' + company.founders[0].photo + '">' +
+             '<p>' + company.founders[0].name + '<br>' +
+             company.founders[0].title + '<br><br>' +
+             company.founders[0].credentials + '</p>' +
+             '</div>';
+  htmlStr += '<hr>';
+  htmlStr += '<div class="founder">' +
+            '<img class="circle" src="' + company.founders[1].photo + '">' +
+            '<p><b>' + company.founders[1].name + '</b><br>' +
+            company.founders[1].title + '<br><br>' +
+            company.founders[1].credentials + '</p>' +
+            '</div>';
   htmlStr += '<div id="web-bar" class="z-depth-2 ' + company.bgColor + ' white-text detail-title">' +
               company.website + '</div>';
 
@@ -115,15 +121,15 @@ function initCompanyData() {
     description: "ChargaCard is a store-issued credit card that allows customers to pay in installments. Our objective is to empower online shoppers, especially the 70% of millennials without credit scores and limited access to credit, with an alternative financing solution. Unlike the competition which offers third-party financing, ChargaCard empowers online stores to build a recurring financial relationship with their customers, get repeat business, increase brand loyalty, and grow their business through the ChargaNetwork.",
     website: "www.chargacard.com",
     founders: [
-      { name: "John Eagleton",
-        title: "CTO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-4.jpg",
-        credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
-      },
       { name: "Maria Nosikova",
         title: "CEO",
-        photo: "http://lorempixel.com/output/people-q-c-50-50-1.jpg",
+        photo: "../images/CMariaNosikova.jpg",
         credentials: "Maria knows all about finance and is really good at it."
+      },
+      { name: "John Eagleton",
+        title: "CTO",
+        photo: "../images/CJohnEagleton.jpg",
+        credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
       }
     ],
     orientation: "hl",
