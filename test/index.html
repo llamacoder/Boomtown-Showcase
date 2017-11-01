@@ -8,12 +8,12 @@
   </head>
   <body>
     <div id="mocha"></div>
-    <script src="mocha.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js" charset="utf-8"></script>
     <script>mocha.setup('bdd');</script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="../js/showcase.js" charset="utf-8"></script>
-    <script src="tests.js"></script>
+    <script src="./tests.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>
       mocha.run();
     </script>

@@ -1,5 +1,5 @@
 casper.test.begin('Test Boomtown Site', 1, function suite(test) {
-    casper.start("http://127.0.0.1:3000/", function() {
+    casper.start("../index.html", function() {
         test.assertTitle("Boomtown Showcase", "title is correct");
         if (this.exists('.company-row')) {
           this.echo('the company row exists');

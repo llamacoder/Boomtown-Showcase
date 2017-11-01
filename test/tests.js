@@ -1,42 +1,106 @@
 const expect = chai.expect
 
-describe('gCompanies', function () {
-  it('is an object', function () {
-    expect(gCompanies).to.be.a('array')
+let company = {
+    id: 800,
+    name: "Good Company",
+    logo: "./images/yaguaraLogo.png",
+    tagLine: "Your Growth Management Platform",
+    description: "Good Company aligns your team behind goals and gives individuals access to the data they need so they can be productive, proactive, and successful.",
+    website: "goodcompany.com",
+    founders: [
+      { name: "Founder One",
+        title: "CEO",
+        photo: "../images/founder1.jpg",
+        credentials: "Founder One is good at CEO things."
+      },
+      { name: "Founder Two",
+        title: "CIO",
+        photo: "../images/founder2.jpg",
+        credentials: "Founder Two is good at CIO things."
+      }
+    ],
+    email: "info@goodcompany.com",
+    orientation: "hr",
+    bgColor: "cyan darken-3",
+    lgColor: "black",
+    smColor: "orange"
+};
+
+let companyNoFounders = {
+    id: 800,
+    name: "Good Company",
+    logo: "./images/yaguaraLogo.png",
+    tagLine: "Your Growth Management Platform",
+    description: "Good Company aligns your team behind goals and gives individuals access to the data they need so they can be productive, proactive, and successful.",
+    website: "goodcompany.com",
+    founders: [],
+    email: "info@goodcompany.com",
+    orientation: "hr",
+    bgColor: "cyan darken-3",
+    lgColor: "black",
+    smColor: "orange"
+};
+
+let founderString = '<div class="z-depth-2 cyan darken-3 white-text detail-title">Founders</div>' +
+                    '<div class="founder"><img class="circle" src="../images/founder1.jpg">' +
+                    '<p>Founder One<br>CEO<br><br>Founder One is good at CEO things.' +
+                    '</p></div><hr>' +
+                    '<div class="founder"><img class="circle" src="../images/founder2.jpg">' +
+                    '<p>Founder Two<br>CIO<br><br>Founder Two is good at CIO things.' +
+                    '</p></div>';
+
+let headerString = '<div class="z-depth-2 cyan darken-3 white-text detail-title">Good Company</div>' +
+                   '<div class="company col s12 m6 l4"><img class="z-depth-2" src="./images/yaguaraLogo.png">' +
+                   '</div><div class="z-depth-2"><p>Good Company aligns your team behind goals and gives ' +
+                   'individuals access to the data they need so they can be productive, proactive, and successful.</div>'
+
+
+
+
+'<div class="z-depth-2 cyan darken-3 white-text detail-title">Founders</div>' +
+                    '<div class="founder"><img class="circle" src="../images/founder1.jpg">' +
+                    '<p>Founder One<br>CEO<br><br>Founder One is good at CEO things.' +
+                    '</p></div><hr>' +
+                    '<div class="founder"><img class="circle" src="../images/founder2.jpg">' +
+                    '<p>Founder Two<br>CIO<br><br>Founder Two is good at CIO things.' +
+                    '</p></div>';
+
+let footerString = '<div class="cyan darken-3 detail-web-bar ">' +
+                   '<a id="web-button" href="http://goodcompany.com/" target="blank_" ' +
+                   'class=" white-text waves-effect btn-flat">Visit Our Website</a>' +
+                   '<a id="contact-button" href="mailto:info@goodcompany.com?Subject=Info%20About%20Your%20Company" ' +
+                   'class=" white-text waves-effect btn-flat">Contact Us</a>';
+
+
+describe('#makeFounderDivs', function() {
+  it('is a function', function () {
+    expect(makeFounderDivs).to.be.a('function')
   })
 
-  describe('#getCompanyFromSrc', function () {
-    it('should be a function', function () {
-      expect(getCompanyFromSrc).to.be.a('function')
-    })
+  it('should return a valid HTML string of founder data', function() {
+    expect(makeFounderDivs(company)).to.equal(founderString)
+  })
+  it('should return an empty string if there are no founders', function() {
+    expect(makeFounderDivs(companyNoFounders)).to.equal("")
+  })
+})
 
-    it('should return a company object', function () {
-      expect(getCompanyFromSrc('./images/ccLogo.png')).to.deep.equal(
-        { id: 1,
-          name: "ChargaCard",
-          logo: "./images/ccLogo.png",
-          tagLine: "Changing the Face of Money",
-          description: "ChargaCard is a store-issued credit card that allows customers to pay in installments. Our objective is to empower online shoppers, especially the 70% of millennials without credit scores and limited access to credit, with an alternative financing solution. Unlike the competition which offers third-party financing, ChargaCard empowers online stores to build a recurring financial relationship with their customers, get repeat business, increase brand loyalty, and grow their business through the ChargaNetwork.",
-          website: "www.chargacard.com",
-          founders: [
-            { name: "Maria Nosikova",
-              title: "CEO",
-              photo: "../images/CMariaNosikova.jpg",
-              credentials: "Maria knows all about finance and is really good at it."
-            },
-            { name: "John Eagleton",
-              title: "CTO",
-              photo: "../images/CJohnEagleton.jpg",
-              credentials: "John is the technical guru for the company.  He has been doing technical things forever and is really good at them."
-            }
-          ],
-          email: "info@chargacard.com",
-          orientation: "hl",
-          bgColor: "teal lighten-2",
-          lgColor: "white",
-          smColor: "lightGrey"
-        }
-      )
-    })
+describe('#makeHTMLHdrDetail', function() {
+  it('is a function', function () {
+    expect(makeHTMLHdrDetail).to.be.a('function')
+  })
+
+  it('should return a valid HTML string of header data', function() {
+    expect(makeHTMLHdrDetail(company)).to.equal(headerString)
+  })
+})
+
+describe('#makeHTMLFooterDetail', function() {
+  it('is a function', function () {
+    expect(makeHTMLFooterDetail).to.be.a('function')
+  })
+
+  it('should return a valid HTML string of header data', function() {
+    expect(makeHTMLFooterDetail(company)).to.equal(footerString)
   })
 })

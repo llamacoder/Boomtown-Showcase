@@ -20,4 +20,4 @@ The user can click on any of the company cards to get more information about tha
 
 ![](6.png)
 
-To install this code, fork and clone and npm install.  You can run unit tests by running live-server in the test directory; the tests are in the tests.js file.  You can run browser tests by running casperjs casper_tests.js (just verifies the page title) and casperjs test casper_tests_really.js (checks for the presence of the "company-row" browser element).
+To install this code, fork and clone and npm install.  You can run unit tests by running live-server in the main directory and adding /tests to the url; the tests are in the tests.js file.  You can run browser tests by running casperjs casper_tests.js (just verifies the page title) and casperjs test casper_tests_really.js (checks for the presence of the "company-row" browser element).

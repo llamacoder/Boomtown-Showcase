@@ -56,18 +56,11 @@ function getCompanyFromSrc(str) {
   return null;
 }
 
-function showCompanyDetails(company) {
-  //  set up the new company data on the detail panel and show it
-  let $detail = $("#detail-panel");
-  $detail.empty();
-  let htmlStr = '<div class="z-depth-2 ' + company.bgColor + ' white-text detail-title">' +
-                company.name + '</div>';
-  htmlStr += '<div class="company col s12 m6 l4">' +
-      '<img class="z-depth-2" src="' + company["logo"] +
-      '">' +
-      '</div>' +
-      '<div class="z-depth-2"><p>' + company.description + "</div>";
-  htmlStr += '<div class="z-depth-2 ' + company.bgColor + ' white-text detail-title">Founders</div>';
+function makeFounderDivs(company) {
+  let htmlStr = "";
+  if (company.founders.length > 0) {
+    htmlStr += '<div class="z-depth-2 ' + company.bgColor + ' white-text detail-title">Founders</div>';
+  }
   for (var i = 0; i < company.founders.length; i++) {
     htmlStr += '<div class="founder">' +
                '<img class="circle" src="' + company.founders[i].photo + '">' +
@@ -79,19 +72,47 @@ function showCompanyDetails(company) {
       htmlStr += '<hr>';
     }
   }
-  htmlStr += '<div class="' + company.bgColor +
+  return htmlStr;
+}
+
+function makeHTMLHdrDetail(company) {
+  let htmlStr = '<div class="z-depth-2 ' + company.bgColor + ' white-text detail-title">' +
+                company.name + '</div>';
+  htmlStr += '<div class="company col s12 m6 l4">' +
+      '<img class="z-depth-2" src="' + company["logo"] +
+      '">' +
+      '</div>' +
+      '<div class="z-depth-2"><p>' + company.description + "</div>";
+  return htmlStr;
+}
+
+function makeHTMLFooterDetail(company) {
+  let htmlStr = '<div class="' + company.bgColor +
              ' detail-web-bar ">' +
              '<a id="web-button" href="http://' + company.website + '/" target="blank_" class=" white-text waves-effect btn-flat">Visit Our Website</a>' +
              '<a id="contact-button" href="mailto:' + company.email +
              '?Subject=Info%20About%20Your%20Company" class=" white-text waves-effect btn-flat">Contact Us</a>';
+  return htmlStr;
+}
 
+function makeHTMLFromCompany(company) {
+  let htmlStr = makeHTMLHdrDetail(company);
+  htmlStr += makeFounderDivs(company);
+  htmlStr += makeHTMLFooterDetail(company);
+  return htmlStr;
+}
 
-  $detail.append(htmlStr);
+function showCompanyDetails(company) {
+  //  set up the new company data on the detail panel and show it
+  let $detail = $("#detail-panel");
+  $detail.empty();
+
+  $detail.append(makeHTMLFromCompany(company));
 
   $.fancybox.open($('#detail-panel'));
 }
 
-//  Update fav status after user click
+//  Update fav status after user clicks the i tag
 function toggleFavState(i) {
   //  get parent a and toggle its color
   let a = $(i).parent();
@@ -345,12 +366,3 @@ document.addEventListener("DOMContentLoaded", function() {
   addFavListeners();
   addCompanyListeners();
 });
-
-var calculator = {}
-
-calculator.add = function(num1, num2) {
-  return num1 + num2;
-}
-calculator.subtract = function(num1, num2) {
-  return num1 - num2;
-}
